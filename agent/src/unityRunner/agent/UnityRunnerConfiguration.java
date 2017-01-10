@@ -39,6 +39,7 @@ public class UnityRunnerConfiguration {
     final String executeMethod;
     final String buildPlayer;
     final String buildPath;
+    final String buildTarget;
     final String extraOpts;
     final String unityVersion;
     final String detectedUnityVersionPath;
@@ -95,6 +96,7 @@ public class UnityRunnerConfiguration {
         buildPlayer = Parameters.getString(runnerParameters, PluginConstants.PROPERTY_BUILD_PLAYER);
         buildPath = FilenameUtils.separatorsToSystem(
                 Parameters.getString(runnerParameters, PluginConstants.PROPERTY_BUILD_PATH));
+        buildTarget = Parameters.getString(runnerParameters, PluginConstants.PROPERTY_BUILD_TARGET);
         extraOpts = Parameters.getString(runnerParameters, PluginConstants.PROPERTY_BUILD_EXTRA);
 
         clearBefore = Parameters.getBoolean(runnerParameters, PluginConstants.PROPERTY_CLEAR_OUTPUT_BEFORE);
